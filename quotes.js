@@ -16,6 +16,9 @@ const getQuotes = async () => {
 const addQuote = async () => {
     const quote = await getQuotes();
     const newLi = document.createElement('LI');
+    newLi.classList.add('list-group-item');
+    newLi.classList.add('bg-light');
+    newLi.classList.add('m-1');
     newLi.append(`${quote.text} - ${quote.author || "anonymus"}`);
     messages.append(newLi);
     // console.log(quote);
