@@ -16,7 +16,7 @@ const getQuotes = async () => {
 const addQuote = async () => {
     const quote = await getQuotes();
     const newLi = document.createElement('LI');
-    newLi.append(`${quote.text} - ${quote.author}`);
+    newLi.append(`${quote.text} - ${quote.author || "anonymus"}`);
     messages.append(newLi);
     // console.log(quote);
 }
